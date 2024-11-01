@@ -42,7 +42,6 @@ function attachEvents() {
         for (const curObj of filteredDataValues) {
             let liEl = document.createElement('li');
             liEl.textContent = curObj.text;
-
             ulEl.appendChild(liEl);
         }
     });
