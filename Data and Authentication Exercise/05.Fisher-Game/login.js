@@ -2,7 +2,6 @@ function login() {
   document.querySelector('#home').classList.remove('active');
   document.querySelectorAll('#guest a')[0].classList.add('active');
   document.querySelector('form button').addEventListener('click', submitData);
-
   let userData = JSON.parse(sessionStorage.getItem('dataUser'));
   if (userData !== null && userData.accessToken) {
     document.getElementById('guest').style.display = 'none';
