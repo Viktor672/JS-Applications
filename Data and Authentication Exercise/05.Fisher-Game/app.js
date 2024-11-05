@@ -7,17 +7,20 @@ function fisherGame() {
     let dataUser = null;
     dataUser = JSON.parse(sessionStorage.getItem('dataUser'))
     catchesDivEl.innerHTML = '';
+    
     if (dataUser !== null) {
         document.getElementById('user').style.display = "inline-block"
         document.getElementById('guest').style.display = "none"
         document.querySelector("p.email span").textContent = dataUser.email
         addButtonEl.disabled = false
         loadCatches()
-    } else {
+    } 
+    else {
         addButtonEl.disabled = true
         document.getElementById('user').style.display = 'none'
         document.getElementById('guest').style.display = "inline-block"
     }
+    
     async function loadCatches() {
         let url = `http://localhost:3030/data/catches`
         let response = await fetch(url)
