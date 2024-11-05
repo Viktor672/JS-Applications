@@ -1,10 +1,10 @@
 function register() {
   let formEl = document.querySelector('form');
+  let userData = JSON.parse(sessionStorage.getItem('dataUser'));
   let activeEls = document.querySelectorAll("a").forEach(curEl => {
     curEl.classList.remove('active')
     document.querySelector('#register').classList.add('active')
   });
-  let userData = JSON.parse(sessionStorage.getItem('dataUser'));
 
   if (userData !== null && userData.accessToken) {
     document.getElementById('guest').style.display = 'none';
