@@ -1,15 +1,16 @@
 function register() {
   let formEl = document.querySelector('form');
   let userData = JSON.parse(sessionStorage.getItem('dataUser'));
-  let activeEls = document.querySelectorAll("a").forEach(curEl => {
-    curEl.classList.remove('active')
-    document.querySelector('#register').classList.add('active')
-  });
+
+  for (const curEl of document.querySelectorAll('a')) {
+    curEl.classList.remove('active');
+    document.querySelector('#register').classList.add('active');
+  }
 
   if (userData !== null && userData.accessToken) {
     document.getElementById('guest').style.display = 'none';
     document.getElementById('user').style.display = 'inline-block';
-  } 
+  }
   else {
     document.getElementById('guest').style.display = 'inline-block';
     document.getElementById('user').style.display = 'none';
@@ -69,9 +70,7 @@ function register() {
     } catch (e) {
       document.querySelector('p.notification').textContent = e.message
       formEl.reset()
-
     }
-
   }
 }
 
