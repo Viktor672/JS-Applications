@@ -2,7 +2,6 @@ function fisherGame() {
     let catchesDivEl = document.getElementById('catches');
     let formEl = document.querySelector("#addForm")
     let addButtonEl = document.querySelector('.add')
-
     let loadButtonEl = document.querySelector('.load');
     loadButtonEl.addEventListener('click', loadCatches)
     let dataUser = null;
