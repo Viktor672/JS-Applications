@@ -3,13 +3,16 @@ function login() {
   document.querySelectorAll('#guest a')[0].classList.add('active');
   document.querySelector('form button').addEventListener('click', submitData);
   let userData = JSON.parse(sessionStorage.getItem('dataUser'));
+  
   if (userData !== null && userData.accessToken) {
     document.getElementById('guest').style.display = 'none';
     document.getElementById('user').style.display = 'inline-block';
-  } else {
+  } 
+  else {
     document.getElementById('guest').style.display = 'inline-block';
     document.getElementById('user').style.display = 'none';
   }
+  
   async function submitData(e) {
     e.preventDefault();
     let formEl = document.querySelector('form');
