@@ -9,7 +9,8 @@ function register() {
   if (userData !== null && userData.accessToken) {
     document.getElementById('guest').style.display = 'none';
     document.getElementById('user').style.display = 'inline-block';
-  } else {
+  } 
+  else {
     document.getElementById('guest').style.display = 'inline-block';
     document.getElementById('user').style.display = 'none';
   }
