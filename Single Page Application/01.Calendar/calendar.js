@@ -15,7 +15,7 @@ function calendar() {
             Dec: 12
         }
 
-        return monthObj[month]
+        return monthObj[month];
     }
 
 
