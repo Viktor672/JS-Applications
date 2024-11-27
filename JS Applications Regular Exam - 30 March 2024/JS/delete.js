@@ -22,7 +22,7 @@ export const deletePage = async (ctx) => {
                 throw new Error(response.status);
             }
 
-            page.redirect(`/market`);
+            page.redirect('/market');
         }
         catch (error) {
             displayMessageError(error.message);
